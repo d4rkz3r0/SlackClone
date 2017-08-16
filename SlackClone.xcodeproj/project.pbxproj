@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD491F43BAE400880E54 /* AppDelegate.swift */; };
-		BECFCD4C1F43BAE400880E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD4B1F43BAE400880E54 /* ViewController.swift */; };
+		BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */; };
 		BECFCD4E1F43BAE400880E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECFCD4D1F43BAE400880E54 /* Assets.xcassets */; };
 		BECFCD511F43BAE400880E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECFCD4F1F43BAE400880E54 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		BECFCD461F43BAE400880E54 /* SlackClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECFCD491F43BAE400880E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BECFCD4B1F43BAE400880E54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BECFCD4D1F43BAE400880E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BECFCD501F43BAE400880E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BECFCD521F43BAE400880E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +33,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE43A67E1F43BCF800E49572 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BECFCD4D1F43BAE400880E54 /* Assets.xcassets */,
+				BECFCD491F43BAE400880E54 /* AppDelegate.swift */,
+				BECFCD4F1F43BAE400880E54 /* Main.storyboard */,
+				BECFCD521F43BAE400880E54 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BE43A67F1F43C3D500E49572 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		BECFCD3D1F43BAE400880E54 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +71,8 @@
 		BECFCD481F43BAE400880E54 /* SlackClone */ = {
 			isa = PBXGroup;
 			children = (
-				BECFCD491F43BAE400880E54 /* AppDelegate.swift */,
-				BECFCD4B1F43BAE400880E54 /* ViewController.swift */,
-				BECFCD4D1F43BAE400880E54 /* Assets.xcassets */,
-				BECFCD4F1F43BAE400880E54 /* Main.storyboard */,
-				BECFCD521F43BAE400880E54 /* Info.plist */,
+				BE43A67E1F43BCF800E49572 /* App */,
+				BE43A67F1F43C3D500E49572 /* ViewControllers */,
 			);
 			path = SlackClone;
 			sourceTree = "<group>";
@@ -133,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECFCD4C1F43BAE400880E54 /* ViewController.swift in Sources */,
+				BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */,
 				BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +307,7 @@
 				BECFCD571F43BAE400880E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
