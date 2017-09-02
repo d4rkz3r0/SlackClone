@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE43A6821F43CD0F00E49572 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6811F43CD0F00E49572 /* MainWindowController.swift */; };
+		BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */; };
+		BE43A6871F43CEE800E49572 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6861F43CEE800E49572 /* Constants.swift */; };
 		BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD491F43BAE400880E54 /* AppDelegate.swift */; };
 		BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */; };
 		BECFCD4E1F43BAE400880E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECFCD4D1F43BAE400880E54 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE43A6811F43CD0F00E49572 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		BE43A6861F43CEE800E49572 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BECFCD461F43BAE400880E54 /* SlackClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECFCD491F43BAE400880E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +54,25 @@
 			isa = PBXGroup;
 			children = (
 				BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */,
+				BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BE43A6801F43CCF700E49572 /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE43A6811F43CD0F00E49572 /* MainWindowController.swift */,
+			);
+			name = WindowControllers;
+			sourceTree = "<group>";
+		};
+		BE43A6851F43CEDE00E49572 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE43A6861F43CEE800E49572 /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		BECFCD3D1F43BAE400880E54 = {
@@ -72,7 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				BE43A67E1F43BCF800E49572 /* App */,
+				BE43A6801F43CCF700E49572 /* WindowControllers */,
 				BE43A67F1F43C3D500E49572 /* ViewControllers */,
+				BE43A6851F43CEDE00E49572 /* Utils */,
 			);
 			path = SlackClone;
 			sourceTree = "<group>";
@@ -149,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE43A6871F43CEE800E49572 /* Constants.swift in Sources */,
+				BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */,
 				BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */,
 				BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */,
+				BE43A6821F43CD0F00E49572 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
