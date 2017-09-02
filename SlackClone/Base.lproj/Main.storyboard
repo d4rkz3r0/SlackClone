@@ -705,8 +705,11 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="Pqm-Fk-zZF" id="UEn-IO-JPs"/>
+                                </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqm-Fk-zZF">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqm-Fk-zZF" customClass="NSSecureTextField">
                                 <rect key="frame" x="150" y="171" width="180" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="b9l-vn-ufX"/>
@@ -717,6 +720,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="JcT-7z-dbm" id="bCC-Pl-pm1"/>
+                                </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xil-BY-WEe">
                                 <rect key="frame" x="198" y="128" width="84" height="37"/>
@@ -794,6 +800,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="Hyq-GP-r1I" id="Xrd-eQ-fYZ"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyq-GP-r1I">
                                 <rect key="frame" x="30" y="173" width="200" height="26"/>
@@ -805,8 +814,11 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="Mfo-qn-BfH" id="Rry-m4-Rje"/>
+                                </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfo-qn-BfH">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfo-qn-BfH" customClass="NSSecureTextField">
                                 <rect key="frame" x="30" y="137" width="200" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="CV3-cQ-eZF"/>
@@ -816,6 +828,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="MfE-12-S6K" id="5YZ-t0-PDw"/>
+                                </connections>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIz-J0-wWl">
                                 <rect key="frame" x="300" y="148" width="100" height="100"/>
@@ -834,6 +849,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="setImageButtonClicked:" target="dCk-7Z-tYl" id="EgD-I2-rXd"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Wo-WL-GSH">
                                 <rect key="frame" x="173" y="79" width="134" height="32"/>
@@ -841,6 +859,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="createAccountButtonClicked:" target="dCk-7Z-tYl" id="xRP-wc-hQz"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PW-fe-qw9">
                                 <rect key="frame" x="152" y="46" width="176" height="24"/>
@@ -882,6 +903,12 @@
                             <constraint firstItem="tIz-J0-wWl" firstAttribute="top" secondItem="K7b-JN-joz" secondAttribute="bottom" constant="15" id="weA-H4-aac"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Hyq-GP-r1I" id="xjS-py-51a"/>
+                        <outlet property="nameTextField" destination="MfE-12-S6K" id="nmg-9p-QGn"/>
+                        <outlet property="passwordTextField" destination="Mfo-qn-BfH" id="Oxx-Rc-60j"/>
+                        <outlet property="userImageView" destination="tIz-J0-wWl" id="OeX-wA-kZW"/>
+                    </connections>
                 </viewController>
                 <customObject id="sKs-9I-4O4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
