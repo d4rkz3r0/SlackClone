@@ -734,6 +734,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="Futura-Medium"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="loginButtonClicked:" target="XfG-lQ-9wD" id="IX1-RP-9tG"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUL-IG-1ar">
                                 <rect key="frame" x="138" y="46" width="205" height="24"/>
@@ -769,10 +772,61 @@
                             <constraint firstItem="chY-ch-WQa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="szw-NZ-nLl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="JcT-7z-dbm" id="orF-Wu-Ldu"/>
+                        <outlet property="passwordTextField" destination="Pqm-Fk-zZF" id="P2D-e1-jHI"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="670"/>
+        </scene>
+        <!--Main Split View Controller-->
+        <scene sceneID="oEg-Yn-2Xy">
+            <objects>
+                <splitViewController storyboardIdentifier="mainSplitVC" id="McB-4F-qeY" customClass="MainSplitViewController" customModule="SlackClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="mcU-WE-39J"/>
+                        <splitViewItem id="sbb-Ea-geW"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="xxi-Z9-Pax">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="jxF-Sj-54y" kind="relationship" relationship="splitItems" id="dHF-wl-abU"/>
+                        <segue destination="THh-SC-5RU" kind="relationship" relationship="splitItems" id="axJ-Gr-ySw"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="bK0-H4-U4e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="1242"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vxn-ov-4NI">
+            <objects>
+                <viewController id="jxF-Sj-54y" sceneMemberID="viewController">
+                    <view key="view" id="IEB-OY-uFS">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="bZp-Fg-AGd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="1242"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H9h-3p-H02">
+            <objects>
+                <viewController id="THh-SC-5RU" sceneMemberID="viewController">
+                    <view key="view" id="k2F-fG-eWb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="mGn-hE-8Ru" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="1242"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="Oys-Ns-2ok">

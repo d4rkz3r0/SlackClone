@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6182F258802933FB90A05685 /* Pods_SlackClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF02BB753EFC6AEB5C0BAF12 /* Pods_SlackClone.framework */; };
+		BE0160901F5B05BB00FD3892 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE01608F1F5B05BB00FD3892 /* MainSplitViewController.swift */; };
 		BE43A6821F43CD0F00E49572 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6811F43CD0F00E49572 /* MainWindowController.swift */; };
 		BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */; };
 		BE43A6871F43CEE800E49572 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6861F43CEE800E49572 /* Constants.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		26DACEAF170CEC1AF9BA8048 /* Pods-SlackClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackClone/Pods-SlackClone.debug.xcconfig"; sourceTree = "<group>"; };
 		BC1C2978519A6248031AABC5 /* Pods-SlackClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackClone/Pods-SlackClone.release.xcconfig"; sourceTree = "<group>"; };
+		BE01608F1F5B05BB00FD3892 /* MainSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		BE43A6811F43CD0F00E49572 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		BE43A6861F43CEE800E49572 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		BE43A6801F43CCF700E49572 /* WindowControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE01608F1F5B05BB00FD3892 /* MainSplitViewController.swift */,
 				BE43A6811F43CD0F00E49572 /* MainWindowController.swift */,
 			);
 			name = WindowControllers;
@@ -259,6 +262,7 @@
 			files = (
 				BE43A6871F43CEE800E49572 /* Constants.swift in Sources */,
 				BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */,
+				BE0160901F5B05BB00FD3892 /* MainSplitViewController.swift in Sources */,
 				BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */,
 				BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */,
 				BE43A6821F43CD0F00E49572 /* MainWindowController.swift in Sources */,

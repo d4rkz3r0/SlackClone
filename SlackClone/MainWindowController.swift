@@ -14,6 +14,7 @@ class MainWindowController: NSWindowController
     //View Controller Refs
     var loginWindowVC: LoginViewController?;
     var createAccountWindowVC: CreateAccountViewController?;
+    var mainSplitVC: MainSplitViewController?;
     
     override func windowDidLoad()
     {
@@ -38,5 +39,16 @@ class MainWindowController: NSWindowController
     {
         guard let vSignInVC = loginWindowVC else { print("Login VC was invalid."); return; }
         window?.contentView = vSignInVC.view;
+    }
+    
+    func moveToChatSplitVC()
+    {
+        if mainSplitVC == nil
+        {
+            mainSplitVC = storyboard?.instantiateController(withIdentifier: mainSplitVCIdentifier) as? MainSplitViewController;
+        }
+        
+        guard let vMainSplitVC = mainSplitVC else { print("Main Split VC was never created."); return; }
+        window?.contentView = vMainSplitVC.view;
     }
 }

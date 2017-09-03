@@ -23,7 +23,6 @@ class CreateAccountViewController: NSViewController
     override func viewDidLoad()
     {
         super.viewDidLoad();
-        
     }
     
     //MARK: IBActions
@@ -57,6 +56,7 @@ class CreateAccountViewController: NSViewController
     //User Account Creation
     @IBAction func createAccountButtonClicked(_ sender: Any)
     {
+        //Just in case...
         PFUser.logOut();
         
         let newUser = PFUser();
@@ -70,10 +70,12 @@ class CreateAccountViewController: NSViewController
             
             guard error == nil else { print(error!.localizedDescription); return; }
             guard success else { return; }
-            //print("User created!");
+            print("User created!");
+            
+            guard let windowController = self.view.window?.windowController as? MainWindowController else { return; }
+            windowController.moveToChatSplitVC();
         }
     }
-    
 }
 
 extension CreateAccountViewController
