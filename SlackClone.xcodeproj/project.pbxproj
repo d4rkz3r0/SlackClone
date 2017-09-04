@@ -13,6 +13,7 @@
 		BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */; };
 		BE43A6871F43CEE800E49572 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6861F43CEE800E49572 /* Constants.swift */; };
 		BE806E241F5CD4DA0006B22A /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE806E231F5CD4DA0006B22A /* AddChannelViewController.swift */; };
+		BE806E261F5CF23C0006B22A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE806E251F5CF23C0006B22A /* ChatViewController.swift */; };
 		BE8FCEE61F5C74BF00C1FA5A /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8FCEE51F5C74BF00C1FA5A /* ChannelListViewController.swift */; };
 		BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD491F43BAE400880E54 /* AppDelegate.swift */; };
 		BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */; };
@@ -28,6 +29,7 @@
 		BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		BE43A6861F43CEE800E49572 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE806E231F5CD4DA0006B22A /* AddChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
+		BE806E251F5CF23C0006B22A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BE8FCEE51F5C74BF00C1FA5A /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		BECFCD461F43BAE400880E54 /* SlackClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECFCD491F43BAE400880E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */,
 				BE8FCEE51F5C74BF00C1FA5A /* ChannelListViewController.swift */,
 				BE806E231F5CD4DA0006B22A /* AddChannelViewController.swift */,
+				BE806E251F5CF23C0006B22A /* ChatViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				BE0160901F5B05BB00FD3892 /* MainSplitViewController.swift in Sources */,
 				BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */,
 				BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */,
+				BE806E261F5CF23C0006B22A /* ChatViewController.swift in Sources */,
 				BE43A6821F43CD0F00E49572 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

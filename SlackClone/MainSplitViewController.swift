@@ -19,4 +19,12 @@ class MainSplitViewController: NSSplitViewController
         // Do view setup here.
     }
     
+    override func viewDidAppear()
+    {
+        guard let vChannelListVC = splitViewItems[0].viewController as? ChannelListViewController else { return; }
+        guard let vChatVC = splitViewItems[1].viewController as? ChatViewController else { return; }
+        
+        vChannelListVC.chatVC = vChatVC;
+    }
+    
 }

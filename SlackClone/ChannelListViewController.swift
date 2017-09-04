@@ -11,8 +11,9 @@ import Parse
 
 class ChannelListViewController: NSViewController
 {
-    //Window Controller
+    //Window Controllers
     var addChannelWC: NSWindowController?;
+    var chatVC: ChatViewController?;
     
     //MARK: IBOutlets
     //User Info
@@ -74,6 +75,14 @@ extension ChannelListViewController: NSTableViewDelegate, NSTableViewDataSource
         
         
         return channelCell;
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification)
+    {
+        guard tableView.selectedRow >= 0 else { return; }
+        let selectedChannel = channels[tableView.selectedRow];
+        
+        chatVC?.updateWithChannel(channel: selectedChannel);
     }
 }
 
