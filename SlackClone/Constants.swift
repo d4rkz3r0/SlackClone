@@ -11,3 +11,4 @@ import Foundation
 let createAccountVCIdentifier = "CreateAccountVC";
 let loginVCIdentifier = "LoginVC";
 let mainSplitVCIdentifier = "mainSplitVC";
+let channelListWCIdentifier = "addChannelWC"

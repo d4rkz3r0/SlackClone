@@ -12,6 +12,8 @@
 		BE43A6821F43CD0F00E49572 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6811F43CD0F00E49572 /* MainWindowController.swift */; };
 		BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */; };
 		BE43A6871F43CEE800E49572 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43A6861F43CEE800E49572 /* Constants.swift */; };
+		BE806E241F5CD4DA0006B22A /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE806E231F5CD4DA0006B22A /* AddChannelViewController.swift */; };
+		BE8FCEE61F5C74BF00C1FA5A /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8FCEE51F5C74BF00C1FA5A /* ChannelListViewController.swift */; };
 		BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD491F43BAE400880E54 /* AppDelegate.swift */; };
 		BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */; };
 		BECFCD4E1F43BAE400880E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECFCD4D1F43BAE400880E54 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		BE43A6811F43CD0F00E49572 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		BE43A6861F43CEE800E49572 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE806E231F5CD4DA0006B22A /* AddChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
+		BE8FCEE51F5C74BF00C1FA5A /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		BECFCD461F43BAE400880E54 /* SlackClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECFCD491F43BAE400880E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			children = (
 				BECFCD4B1F43BAE400880E54 /* LoginViewController.swift */,
 				BE43A6831F43CD8000E49572 /* CreateAccountViewController.swift */,
+				BE8FCEE51F5C74BF00C1FA5A /* ChannelListViewController.swift */,
+				BE806E231F5CD4DA0006B22A /* AddChannelViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 			files = (
 				BE43A6871F43CEE800E49572 /* Constants.swift in Sources */,
 				BE43A6841F43CD8000E49572 /* CreateAccountViewController.swift in Sources */,
+				BE806E241F5CD4DA0006B22A /* AddChannelViewController.swift in Sources */,
+				BE8FCEE61F5C74BF00C1FA5A /* ChannelListViewController.swift in Sources */,
 				BE0160901F5B05BB00FD3892 /* MainSplitViewController.swift in Sources */,
 				BECFCD4C1F43BAE400880E54 /* LoginViewController.swift in Sources */,
 				BECFCD4A1F43BAE400880E54 /* AppDelegate.swift in Sources */,

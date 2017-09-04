@@ -33,6 +33,8 @@ class LoginViewController: NSViewController
     //Log a User in
     @IBAction func loginButtonClicked(_ sender: Any)
     {
+        guard !emailTextField.stringValue.isEmpty, !passwordTextField.stringValue.isEmpty else { print("Enter your info 1st."); return; }
+
         PFUser.logInWithUsername(inBackground: emailTextField.stringValue, password: passwordTextField.stringValue) { (user, error) in
             
             guard error == nil else { print(error!.localizedDescription); return; }

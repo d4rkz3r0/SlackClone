@@ -56,6 +56,9 @@ class CreateAccountViewController: NSViewController
     //User Account Creation
     @IBAction func createAccountButtonClicked(_ sender: Any)
     {
+        guard !emailTextField.stringValue.isEmpty, !passwordTextField.stringValue.isEmpty, !nameTextField.stringValue.isEmpty else { print("Fill out your info 1st."); return; }
+
+        
         //Just in case...
         PFUser.logOut();
         
