@@ -66,11 +66,11 @@ extension ChannelListViewController: NSTableViewDelegate, NSTableViewDataSource
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
     {
-        guard let channelCell = tableView.make(withIdentifier: channelCellIdentifier, owner: nil) as? NSTableCellView else { return nil; }
+        guard let channelCell = tableView.make(withIdentifier: channelCellIdentifier, owner: nil) as? NSTableCellView else { return NSTableCellView(); }
         
-        guard row >= 0 else { return nil; }
+        guard row >= 0 else { return NSTableCellView(); }
         let channel = channels[row];
-        guard let vChannelName = channel["title"] as? String else { return nil; }
+        guard let vChannelName = channel["title"] as? String else { return NSTableCellView(); }
         channelCell.textField?.stringValue = "#\(vChannelName)";
         
         
@@ -104,7 +104,6 @@ extension ChannelListViewController
             guard let vData = data else { return; }
             guard let vImage = NSImage(data: vData) else { return; }
             self.profilePictureImageView.image = vImage;
-            
         }
     }
     

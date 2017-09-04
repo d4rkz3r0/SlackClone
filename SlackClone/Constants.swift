@@ -13,3 +13,4 @@ let loginVCIdentifier = "LoginVC";
 let mainSplitVCIdentifier = "mainSplitVC";
 let channelListWCIdentifier = "addChannelWC";
 let channelCellIdentifier = "channelCell";
+let messageCellIdentifier = "messageCell";
