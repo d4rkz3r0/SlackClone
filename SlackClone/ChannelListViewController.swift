@@ -15,10 +15,13 @@ class ChannelListViewController: NSViewController
     var addChannelWC: NSWindowController?;
     
     //MARK: IBOutlets
+    //User Info
     @IBOutlet weak var profilePictureImageView: NSImageView!
     @IBOutlet weak var nameLabel: NSTextField!
     
-    //User Info
+    //Channel List
+    @IBOutlet weak var tableView: NSTableView!
+    var channels: [PFObject] = [];
     
     
     
@@ -26,18 +29,13 @@ class ChannelListViewController: NSViewController
     {
         super.viewDidLoad()
         
-        
-
-        
-        
     }
     
     override func viewDidAppear()
     {
         super.viewDidAppear();
-        
-
         updateUserUIElems();
+        retrieveChannelList();
     }
     
      //MARK: IBActions
@@ -58,6 +56,27 @@ class ChannelListViewController: NSViewController
     
 }
 
+extension ChannelListViewController: NSTableViewDelegate, NSTableViewDataSource
+{
+    func numberOfRows(in tableView: NSTableView) -> Int
+    {
+        return channels.count;
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
+    {
+        guard let channelCell = tableView.make(withIdentifier: channelCellIdentifier, owner: nil) as? NSTableCellView else { return nil; }
+        
+        guard row >= 0 else { return nil; }
+        let channel = channels[row];
+        guard let vChannelName = channel["title"] as? String else { return nil; }
+        channelCell.textField?.stringValue = "#\(vChannelName)";
+        
+        
+        return channelCell;
+    }
+}
+
 extension ChannelListViewController
 {
     //MARK: Helper Funcs
@@ -76,6 +95,22 @@ extension ChannelListViewController
             guard let vData = data else { return; }
             guard let vImage = NSImage(data: vData) else { return; }
             self.profilePictureImageView.image = vImage;
+            
+        }
+    }
+    
+    fileprivate func retrieveChannelList()
+    {
+        let channelQuery = PFQuery(className: "Channel");
+        channelQuery.order(byAscending: "title");
+        channelQuery.findObjectsInBackground { (channels, error) in
+            guard error == nil else { print(error!.localizedDescription); return; }
+            
+            guard let vChannels = channels else { return; }
+            
+            print("Channels retrieved.");
+            self.channels = vChannels;
+            self.tableView.reloadData();
             
         }
     }
