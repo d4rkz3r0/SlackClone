@@ -18,8 +18,14 @@ class LoginViewController: NSViewController
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        super.viewDidLoad();
+        DispatchQueue.main.asyncAfter(deadline: .now() + .nanoseconds(50)) { self.updateWindowFrame(); }
 
+    }
+    
+    override func viewDidAppear()
+    {
+        updateWindowFrame();
     }
     
     //MARK: IBActions
@@ -42,6 +48,14 @@ class LoginViewController: NSViewController
             guard let windowController = self.view.window?.windowController as? MainWindowController else { return; }
             windowController.moveToChatSplitVC();
         }
+    }
+    
+    fileprivate func updateWindowFrame()
+    {
+        guard var vFrame = view.window?.frame else { return; }
+        
+        vFrame.size = CGSize(width: loginWindowWidth, height: loginWindowHeight);
+        view.window?.setFrame(vFrame, display: true, animate: true);
     }
     
 }

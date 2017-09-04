@@ -28,7 +28,14 @@ class ChatViewController: NSViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        messageTextField.delegate = self;
         
+        
+    }
+    
+    override func viewWillAppear()
+    {
+        clearUI();
     }
     
     //MARK: IBActions
@@ -103,9 +110,6 @@ extension ChatViewController: NSTableViewDataSource, NSTableViewDelegate
             guard let vImage = NSImage(data: vData) else { return; }
             messageCell.userImageView.image = vImage;
         }
-
-        
-        
         
         return messageCell;
     }
@@ -156,6 +160,31 @@ extension ChatViewController
             print("Messages retrieved.");
             self.messages = vMessages;
             self.tableView.reloadData();
+            self.tableView.scrollRowToVisible(self.messages.count - 1);
         }
+    }
+    
+    fileprivate func clearUI()
+    {
+        selectedChannel = nil;
+        messages = [];
+        tableView.reloadData();
+        channelNameLabel.stringValue = "";
+        channelDescriptionLabel.stringValue = "";
+        messageTextField.placeholderString = "";
+    }
+}
+
+//Keyboard Events
+extension ChatViewController: NSTextFieldDelegate
+{
+    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool
+    {
+        if commandSelector == #selector(insertNewline(_:))
+        {
+            sendButtonClicked(self);
+        }
+        
+        return false;
     }
 }

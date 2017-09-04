@@ -15,8 +15,8 @@ class MainSplitViewController: NSSplitViewController
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-        // Do view setup here.
+        super.viewDidLoad();
+        updateWindowFrame();
     }
     
     override func viewDidAppear()
@@ -25,6 +25,15 @@ class MainSplitViewController: NSSplitViewController
         guard let vChatVC = splitViewItems[1].viewController as? ChatViewController else { return; }
         
         vChannelListVC.chatVC = vChatVC;
+        
+        updateWindowFrame();
     }
     
+    fileprivate func updateWindowFrame()
+    {
+        guard var vFrame = view.window?.frame else { return; }
+        
+        vFrame.size = CGSize(width: chatWindowWidth, height: chatWindowHeight);
+        view.window?.setFrame(vFrame, display: true, animate: true);
+    }
 }

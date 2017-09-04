@@ -14,3 +14,9 @@ let mainSplitVCIdentifier = "mainSplitVC";
 let channelListWCIdentifier = "addChannelWC";
 let channelCellIdentifier = "channelCell";
 let messageCellIdentifier = "messageCell";
+
+//App Window Sizing
+let loginWindowWidth = 480;
+let loginWindowHeight = 320;
+let chatWindowWidth = 1000;
+let chatWindowHeight = 600;
