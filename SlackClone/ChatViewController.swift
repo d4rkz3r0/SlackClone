@@ -11,7 +11,6 @@ import Parse
 
 class ChatViewController: NSViewController
 {
-
     //MARK: IBOutlets
     @IBOutlet weak var channelNameLabel: NSTextField!
     @IBOutlet weak var channelDescriptionLabel: NSTextField!
@@ -22,15 +21,13 @@ class ChatViewController: NSViewController
     var selectedChannel: PFObject?;
     var messages: [PFObject] = [];
     
-    
-    
+    //AutoUpdate
+    var timer: Timer?;
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        super.viewDidLoad();
         messageTextField.delegate = self;
-        
-        
     }
     
     override func viewWillAppear()
@@ -63,7 +60,6 @@ class ChatViewController: NSViewController
             guard error == nil, success else { print(error!.localizedDescription); return; }
             
             print("Message written to DB.");
-            
             self.messageTextField.stringValue = "";
             self.retrieveChannelMessages();
         }
@@ -81,8 +77,9 @@ extension ChatViewController: NSTableViewDataSource, NSTableViewDelegate
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
     {
         guard let messageCell = tableView.make(withIdentifier: messageCellIdentifier, owner: nil) as? MessageCell else { return NSTableCellView(); }
-        
         guard row >= 0 else { return NSTableCellView(); }
+        
+        //Message
         let message = messages[row];
         
         //Message Text
@@ -125,6 +122,7 @@ extension ChatViewController
 {
     func updateWithChannel(channel: PFObject)
     {
+        //Channel
         selectedChannel = channel;
         
         //Name
@@ -140,7 +138,6 @@ extension ChatViewController
         messageTextField.placeholderString = "Message \(formattedChannelName)";
         
         retrieveChannelMessages();
-        
     }
     
     func retrieveChannelMessages()
@@ -156,13 +153,22 @@ extension ChatViewController
             guard error == nil else { print(error!.localizedDescription); return; }
             
             guard let vMessages = messages else { return; }
+            guard vMessages.count != self.messages.count else { return; }
             
             print("Messages retrieved.");
             self.messages = vMessages;
             self.tableView.reloadData();
             self.tableView.scrollRowToVisible(self.messages.count - 1);
         }
+        
+        timer?.invalidate();
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            print("Fetching New Messages...");
+            self.retrieveChannelMessages();
+        }
     }
+    
+    func stopMessageTimer() { timer?.invalidate(); };
     
     fileprivate func clearUI()
     {
@@ -184,7 +190,6 @@ extension ChatViewController: NSTextFieldDelegate
         {
             sendButtonClicked(self);
         }
-        
         return false;
     }
 }

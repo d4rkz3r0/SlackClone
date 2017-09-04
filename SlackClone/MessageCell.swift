@@ -16,12 +16,8 @@ class MessageCell: NSTableCellView
     @IBOutlet weak var messageDateLabel: NSTextField!
     @IBOutlet weak var messageTextLabel: NSTextField!
     
-
     override func draw(_ dirtyRect: NSRect)
     {
         super.draw(dirtyRect)
-
-        // Drawing code here.
     }
-    
 }

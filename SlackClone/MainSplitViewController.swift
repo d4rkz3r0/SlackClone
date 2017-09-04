@@ -10,9 +10,6 @@ import Cocoa
 
 class MainSplitViewController: NSSplitViewController
 {
-    //Managed ViewControllers
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad();
@@ -25,7 +22,6 @@ class MainSplitViewController: NSSplitViewController
         guard let vChatVC = splitViewItems[1].viewController as? ChatViewController else { return; }
         
         vChannelListVC.chatVC = vChatVC;
-        
         updateWindowFrame();
     }
     

@@ -11,7 +11,6 @@ import Parse
 
 class LoginViewController: NSViewController
 {
-
     //MARK: IBOutlets
     @IBOutlet weak var emailTextField: NSTextField!
     @IBOutlet weak var passwordTextField: NSSecureTextField!
@@ -20,7 +19,6 @@ class LoginViewController: NSViewController
     {
         super.viewDidLoad();
         DispatchQueue.main.asyncAfter(deadline: .now() + .nanoseconds(50)) { self.updateWindowFrame(); }
-
     }
     
     override func viewDidAppear()
@@ -33,7 +31,6 @@ class LoginViewController: NSViewController
     {
         guard let windowController = view.window?.windowController as? MainWindowController else { return; }
         windowController.moveToCreateAccountVC();
-        
     }
     
     //Log a User in
@@ -57,6 +54,4 @@ class LoginViewController: NSViewController
         vFrame.size = CGSize(width: loginWindowWidth, height: loginWindowHeight);
         view.window?.setFrame(vFrame, display: true, animate: true);
     }
-    
 }
-

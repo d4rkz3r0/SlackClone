@@ -10,7 +10,6 @@ import Cocoa
 
 class MainWindowController: NSWindowController
 {
-
     //View Controller Refs
     var loginWindowVC: LoginViewController?;
     var createAccountWindowVC: CreateAccountViewController?;
@@ -18,10 +17,8 @@ class MainWindowController: NSWindowController
     
     override func windowDidLoad()
     {
-        super.windowDidLoad()
-        
+        super.windowDidLoad();
         loginWindowVC = contentViewController as? LoginViewController;
-    
     }
     
     func moveToCreateAccountVC()

@@ -58,7 +58,6 @@ class CreateAccountViewController: NSViewController
     {
         guard !emailTextField.stringValue.isEmpty, !passwordTextField.stringValue.isEmpty, !nameTextField.stringValue.isEmpty else { print("Fill out your info 1st."); return; }
 
-        
         //Just in case...
         PFUser.logOut();
         

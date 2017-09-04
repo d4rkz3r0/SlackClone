@@ -25,11 +25,9 @@ class ChannelListViewController: NSViewController
     var channels: [PFObject] = [];
     
     
-    
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-        
+        super.viewDidLoad();
     }
     
     override func viewDidAppear()
@@ -39,9 +37,10 @@ class ChannelListViewController: NSViewController
         retrieveChannelList();
     }
     
-     //MARK: IBActions
+    //MARK: IBActions
     @IBAction func logoutButtonClicked(_ sender: Any)
     {
+        chatVC?.stopMessageTimer();
         PFUser.logOut();
         guard let windowController = view.window?.windowController as? MainWindowController else { return; }
         windowController.moveToSignInVC();
@@ -51,10 +50,8 @@ class ChannelListViewController: NSViewController
     {
         addChannelWC = storyboard?.instantiateController(withIdentifier: channelListWCIdentifier) as? NSWindowController;
         addChannelWC?.showWindow(nil);
-        
+        addChannelWC?.window?.delegate = self;
     }
-    
-    
 }
 
 extension ChannelListViewController: NSTableViewDelegate, NSTableViewDataSource
@@ -72,7 +69,6 @@ extension ChannelListViewController: NSTableViewDelegate, NSTableViewDataSource
         let channel = channels[row];
         guard let vChannelName = channel["title"] as? String else { return NSTableCellView(); }
         channelCell.textField?.stringValue = "#\(vChannelName)";
-        
         
         return channelCell;
     }
@@ -112,14 +108,18 @@ extension ChannelListViewController
         let channelQuery = PFQuery(className: "Channel");
         channelQuery.order(byAscending: "title");
         channelQuery.findObjectsInBackground { (channels, error) in
+            
             guard error == nil else { print(error!.localizedDescription); return; }
             
             guard let vChannels = channels else { return; }
-            
             print("Channels retrieved.");
             self.channels = vChannels;
             self.tableView.reloadData();
-            
         }
     }
+}
+
+extension ChannelListViewController: NSWindowDelegate
+{
+    func windowWillClose(_ notification: Notification) { retrieveChannelList(); }
 }

@@ -12,16 +12,13 @@ import Parse
 class AddChannelViewController: NSViewController
 {
     //MARK: IBOutlets
-    
     @IBOutlet weak var channelNameTextField: NSTextField!
     @IBOutlet weak var channelDescriptionTextField: NSTextField!
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-        // Do view setup here.
+        super.viewDidLoad();
     }
-    
     
     @IBAction func addChannelButtonClicked(_ sender: Any)
     {
@@ -32,11 +29,8 @@ class AddChannelViewController: NSViewController
         newChannel.saveInBackground { (success, error) in
             
             guard error == nil, success else { print(error!.localizedDescription); return; }
-            
             print("Channel Created.");
             self.view.window?.close();
-            
-            
         }
     }
 }
